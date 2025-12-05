@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environments
+venv/
+venv_py311/
+tf_env_py312/
+tf_env_new/
+env/
+ENV/
+.venv
+
+# Model files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.pb
+*.tflite
+
+# Data directories (large image datasets)
+data1/
+data/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+
+# MediaPipe extracted files
+mediapipe_extract/
+
+# Wheel files
+*.whl
+
+# Executable files
+*.exe
+*.msi
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
