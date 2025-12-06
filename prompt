@@ -1,0 +1,57 @@
+Based on your InvisInk project requirements, here's a comprehensive prompt you can use:
+InvisInk Project Prompt
+"Create a complete computer vision project called 'InvisInk' - an air-drawing math problem solver that recognizes hand-drawn mathematical equations in real-time and provides solutions."
+Project Requirements:
+Core Functionality:
+
+Use OpenCV and MediaPipe for real-time fingertip tracking
+Implement gesture-based control system (no voice commands or LLMs)
+Train custom CNN on personal handwritten dataset
+Solve mathematical expressions and display results
+
+Dataset Specifications:
+
+Custom handwritten symbols: digits (0-9) and operators (+, -, *, /, (, ))
+30-50 samples per class minimum
+28x28 pixel images, grayscale format
+Data collected using fingertip drawing interface
+
+Gesture Control System:
+
+Fingertip extended: Drawing mode (start/continue drawing symbol)
+Closed fist: Stop drawing current symbol (trigger recognition)
+Thumbs up: Submit complete equation for solving
+Open hand: Clear canvas and reset
+
+Technical Implementation:
+
+CNN architecture for symbol classification (16 classes)
+Real-time hand tracking using MediaPipe
+Drawing canvas system for air-drawing capture
+Mathematical expression parser and solver
+Professional UI with visual feedback
+
+Workflow Example:
+User draws "2" (fingertip) → Fist (recognize "2") → 
+Draw "+" (fingertip) → Fist (recognize "+") → 
+Draw "3" (fingertip) → Fist (recognize "3") → 
+Thumbs up → Display "5"
+Platform: Google Colab compatible with organized cell structure
+Expected Deliverables:
+
+Complete working application
+Data collection tools
+Training pipeline
+Model evaluation metrics
+Professional code documentation
+Ready-to-demonstrate system
+
+Key Constraints:
+
+No pre-trained models or LLMs
+Only personal handwritten dataset
+Real-time performance (30 FPS)
+Intuitive gesture-based interface
+Suitable for college major project submission
+
+This prompt will help you create the exact InvisInk project you described!

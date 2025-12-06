@@ -1,0 +1,77 @@
+# Create fresh .gitignore
+cat > .gitignore << 'EOF'
+# ============================================
+# VIRTUAL ENVIRONMENTS
+# ============================================
+.venv/
+venv/
+venv_py311/
+tf_env_py312/
+tf_env_new/
+env/
+ENV/
+.venv/
+
+# ============================================
+# PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ============================================
+# LARGE FILES (Do NOT push to GitHub)
+# ============================================
+# Model files - UNCOMMENT if you want to EXCLUDE
+# *.h5
+# *.hdf5
+
+# Dataset folders - UNCOMMENT if you want to EXCLUDE  
+# data1/
+# data/
+
+# Executables and binaries
+*.exe
+*.msi
+python-3.11.9-amd64.exe
+
+# Wheel files
+*.whl
+mediapipe-0.10.21-cp312-cp312-win_amd64.whl
+
+# MediaPipe extracted files
+mediapipe_extract/
+
+# ============================================
+# IDE & EDITOR FILES
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# OPERATING SYSTEM
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# LOGS & ENVIRONMENT
+# ============================================
+*.log
+.env
+.env.local
+
+# ============================================
+# NOTEBOOKS & BUILD
+# ============================================
+.ipynb_checkpoints
+dist/
+build/
+*.egg-info/
+EOF
