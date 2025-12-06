@@ -1,5 +1,5 @@
 Contributor: Rohit Vitthal Desai
-Role: Developer
+Role: Developer/ DevOps Enginner
 Branch: rohit-dev
 
 Contribution Goals:
