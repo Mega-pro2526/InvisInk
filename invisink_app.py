@@ -7,7 +7,10 @@ import time
 # --- Configuration and Initialization ---
 MODEL_PATH = 'invisink_model.h5'
 # Define the class mapping manually to match the trainer
-CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/', '(', ')']
+# IMPORTANT: Must match the exact order from model_trainer.py
+CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', 'x', 'slash', '(', ')']
+# Map display symbols for user-friendly output
+DISPLAY_MAP = {'x': '*', 'slash': '/'}
 
 # Load the trained model
 try:
@@ -151,13 +154,18 @@ while True:
                 # Extract ROI and predict
                 symbol_roi = symbol_canvas[y_min:y_max, x_min:x_max]
                 if symbol_roi.size > 0:
+                    # Resize to 30x30 (matching training)
                     resized_symbol = cv2.resize(symbol_roi, (30, 30))
+                    # Normalize to [0, 1] range (matching training)
                     processed_symbol = resized_symbol.reshape(1, 30, 30, 1) / 255.0
                     
-                    prediction = model.predict(processed_symbol)
+                    # Predict
+                    prediction = model.predict(processed_symbol, verbose=0)
                     predicted_class = CLASSES[np.argmax(prediction)]
                     
-                    current_expression += predicted_class
+                    # Map to display-friendly symbol
+                    display_class = DISPLAY_MAP.get(predicted_class, predicted_class)
+                    current_expression += display_class
                     
                 drawing_points.clear()
 

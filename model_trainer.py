@@ -45,6 +45,8 @@ def load_data(data_dir):
             # Read image in grayscale
             image = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
             if image is not None:
+                # Resize image to IMAGE_SIZE to ensure consistency
+                image = cv2.resize(image, IMAGE_SIZE)
                 # Normalize pixel values to be between 0 and 1
                 image = image / 255.0
                 images.append(image)
